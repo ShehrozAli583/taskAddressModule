@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">TaskAddressModule</string>
+    <string name="loader_message">Please wait…</string>
+    <string name="fetching_data">Fetching Data…</string>
+    <string name="your_location">Your Location…</string>
+    <string name="get_location">Get Location</string>
+    <string name="add_address">Add Address</string>
+    <string name="turn_on_location">Please Turn on Your device Location</string>
+    <string name="select_city">Select City</string>
+    <string name="select_area">Select Area</string>
+    <string name="building_name">Building Name</string>
+    <string name="apartment_name">Apartment Name</string>
+    <string name="street_address">Street Address</string>
+
+
+    <string name="city_error">Please Select the City</string>
+    <string name="area_error">Please Select the Area</string>
+    <string name="building_error">Please Enter the Building Name</string>
+    <string name="apartment_error">Please Enter the Apartment Name</string>
+    <string name="street_address_error">Please Enter the Street Address</string>
+</resources>

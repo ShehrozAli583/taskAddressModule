@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ui.addaddress.AddAddressActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilCity"
+        style="@style/EditTextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@android:color/black"
+        app:endIconMode="dropdown_menu"
+        app:errorEnabled="true"
+        app:hintTextColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+            android:id="@+id/spCity"
+            style="@style/MyEditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cursorVisible="true"
+            android:editable="false"
+            android:hint="@string/select_city"
+            android:padding="20dp"
+            android:textCursorDrawable="@drawable/cursor"
+            app:hintTextColor="@android:color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilArea"
+        style="@style/EditTextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColorHint="@android:color/black"
+        app:endIconMode="dropdown_menu"
+        app:errorEnabled="true"
+        app:hintTextColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="@+id/tilCity"
+        app:layout_constraintTop_toBottomOf="@+id/tilCity">
+
+        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+            android:id="@+id/spArea"
+            style="@style/MyEditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:hint="@string/select_area"
+            android:padding="20dp"
+            android:textCursorDrawable="@drawable/cursor"
+            app:hintTextColor="@android:color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilBuildingName"
+        style="@style/EditTextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColorHint="@android:color/black"
+        app:errorEnabled="true"
+        app:hintTextColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="@+id/tilArea"
+        app:layout_constraintTop_toBottomOf="@+id/tilArea">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edBuildingName"
+            style="@style/MyEditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/building_name"
+            android:padding="20dp"
+            android:textCursorDrawable="@drawable/cursor"
+            app:hintTextColor="@android:color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilApartmentName"
+        style="@style/EditTextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColorHint="@android:color/black"
+        app:errorEnabled="true"
+        app:hintTextColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="@+id/tilBuildingName"
+        app:layout_constraintTop_toBottomOf="@+id/tilBuildingName">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edApartmentName"
+            style="@style/MyEditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/apartment_name"
+            android:padding="20dp"
+            android:textCursorDrawable="@drawable/cursor"
+            app:hintTextColor="@android:color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilStreetAddress"
+        style="@style/EditTextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColorHint="@android:color/black"
+        app:errorEnabled="true"
+        app:hintTextColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="@+id/tilApartmentName"
+        app:layout_constraintTop_toBottomOf="@+id/tilApartmentName">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edStreetAddress"
+            style="@style/MyEditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/street_address"
+            android:padding="20dp"
+            android:textCursorDrawable="@drawable/cursor"
+            app:hintTextColor="@android:color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvAddAddressData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
+        android:textSize="16dp"
+        android:typeface="monospace"
+        app:layout_constraintStart_toStartOf="@+id/tilStreetAddress"
+        app:layout_constraintTop_toBottomOf="@+id/tilStreetAddress" />
+
+    <TextView
+        android:id="@+id/tvAddAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/shape_tv_get_location"
+        android:padding="10dp"
+        android:text="@string/add_address"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
+        android:textSize="30dp"
+        android:typeface="monospace"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/pb"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
